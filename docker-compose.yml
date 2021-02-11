@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
+
+
+## docker-compose build -> Builds image using the docker compose configuration 
+# To run a command -> docker-compose run <service. For example: app>
+
+# What this all means ----
+# context - where the files are stored
+# ports - map local port to imageport
+# volumes - watches for changes in that folder and auto build
+# command - runs the specified command. In our case, runserver
