@@ -13,7 +13,8 @@ services:
 
 
 ## docker-compose build -> Builds image using the docker compose configuration 
-# To run a command -> docker-compose run <service. For example: app>
+# To run a command -> docker-compose run <service> <command>
+  # EX: docker-compose run app sh -c "django-admin.py startproject app ."
 
 # What this all means ----
 # context - where the files are stored
